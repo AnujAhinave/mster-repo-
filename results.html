@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="agency-engine.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results & Case Studies | 32 Watts Dental Clinic</title>
@@ -11,17 +10,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-  --primary: #2563eb;
-  --accent: #3b82f6;
-  --bg-app: #ffffff;
-  --text-main: #111827;
-}
-
-/* Update your existing classes to use these variables */
-.slot-card.state-booked { background-color: var(--primary); }
-.nav-tab.active { color: var(--primary); border-bottom-color: var(--primary); }
-body { background-color: var(--bg-app); color: var(--text-main); }
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
         html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
         
@@ -189,23 +177,7 @@ body { background-color: var(--bg-app); color: var(--text-main); }
         </div>
     </footer>
 
-    
-<script>
-
-    const MASTER_CONFIG = {
-  brandName: "Sufiyan Hair Studio", // Change this for the next client
-  type: "SALON",                   // Options: SALON, CLINIC
-  theme: {
-    primary: "#000000",            // Salon Black
-    accent: "#f59e0b",             // Salon Gold
-    bg: "#ffffff",                 // Page Background
-    text: "#111827"                // Main Text
-  },
-  labels: {
-    user: "Client",                // Change to "Patient" for doctors
-    action: "Booking"              // Change to "Appointment" for doctors
-  }
-};
+    <script>
         const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('mobile-menu');
         const icon = document.getElementById('menu-icon');
