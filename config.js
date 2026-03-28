@@ -27,3 +27,23 @@ const MASTER_CONFIG = {
   // --- API BACKEND ---
   gasUrl: "YOUR_GOOGLE_APPS_SCRIPT_URL"
 };
+function applyGlobalBranding() {
+  const c = MASTER_CONFIG;
+  const root = document.documentElement;
+
+  // 1. Inject Colors into CSS Variables
+  root.style.setProperty('--primary', c.theme.primary);
+  root.style.setProperty('--accent', c.theme.accent);
+  root.style.setProperty('--bg-app', c.theme.bg);
+  root.style.setProperty('--text-main', c.theme.text);
+
+  // 2. Update Browser Tab Title
+  document.title = `${c.brandName} | Manage`;
+
+  // 3. Update Text Content (Brand Name & User Type)
+  document.querySelectorAll('.inject-brand').forEach(el => el.innerText = c.brandName);
+  document.querySelectorAll('.inject-user').forEach(el => el.innerText = c.labels.user);
+}
+
+// Run this as soon as the page is ready
+window.addEventListener('DOMContentLoaded', applyGlobalBranding);
