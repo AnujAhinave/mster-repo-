@@ -208,6 +208,20 @@ body { background-color: var(--bg-color); color: var(--text-color); }
                 icon.classList.replace('fa-times', 'fa-bars');
             }
         });
+        const MASTER_CONFIG = {
+  brandName: "Sufiyan Hair Studio", // Change this for the next client
+  type: "SALON",                   // Options: SALON, CLINIC
+  theme: {
+    primary: "#000000",            // Salon Black
+    accent: "#f59e0b",             // Salon Gold
+    bg: "#ffffff",                 // Page Background
+    text: "#111827"                // Main Text
+  },
+  labels: {
+    user: "Client",                // Change to "Patient" for doctors
+    action: "Booking"              // Change to "Appointment" for doctors
+  }
+};
     </script>
 </body>
 </html>
