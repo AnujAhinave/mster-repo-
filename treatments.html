@@ -10,6 +10,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        :root {
+  --primary-color: #000000; /* Change once here to update the whole page */
+  --accent-color: #f59e0b;  /* For buttons/highlights */
+  --bg-color: #ffffff;      /* Page background */
+  --text-color: #111827;    /* Main text */
+}
+
+/* Find your existing classes and replace the colors like this: */
+.btn-submit { background-color: var(--primary-color); }
+.nav-link.active { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); }
+body { background-color: var(--bg-color); color: var(--text-color); }
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
         html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
         
