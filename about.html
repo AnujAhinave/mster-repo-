@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32 Watts Dental Clinic | Dr. Priyanka Jain | RCT & Cosmetic Specialist</title>
+    
+    <link rel="icon" type="image/png" href="images (1).png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
+        
+        /* 32 Watts Brand Colors */
+        .text-electric { color: #00C8D7; }
+        .bg-electric { background-color: #00C8D7; }
+        .border-electric { border-color: #00C8D7; }
+        .gradient-text { background: linear-gradient(90deg, #00C8D7, #2C3E50); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .bg-pattern { 
+            background-color: #ffffff;
+            background-image: radial-gradient(#00C8D7 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+            opacity: 0.05;
+        }
+        .hover-scale { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .hover-scale:hover { transform: translateY(-8px); }
+
+        #mobile-menu {
+            display: none;
+            transform-origin: top right;
+            transition: all 0.2s ease-out;
+            opacity: 0;
+            transform: scale(0.95) translateY(-10px);
+        }
+        #mobile-menu.active {
+            display: block !important;
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-900 antialiased">
+
+    <nav class="bg-white/95 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
+            <a href="index.html" class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-white shadow-sm bg-white">
+                    <img src="images (1).png" alt="32 Watts Logo" class="w-full h-full object-contain scale-125">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-xl tracking-tight uppercase text-gray-900 leading-none">
+                        32 Watts <span class="text-[#00C8D7]">Dental</span>
+                    </span>
+                    <span class="text-[8px] font-bold tracking-[0.3em] text-gray-400 uppercase mt-1">Ghatkopar East</span>
+                </div>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest text-gray-500">
+                <a href="index.html" class="text-[#00C8D7] underline decoration-[#00C8D7] decoration-2 underline-offset-8">Home</a>
+                <a href="about.html" class="hover:text-[#00C8D7] transition-colors">About Doctor</a>
+                <a href="treatments.html" class="hover:text-[#00C8D7] transition-colors">Treatments</a>
+                <a href="results.html" class="hover:text-[#00C8D7] transition-colors">Results</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="#booking" class="bg-black text-white px-6 py-2.5 rounded-md font-bold hover:bg-[#00C8D7] transition-colors text-xs uppercase tracking-widest shadow-lg">Book Slot</a>
+                <button id="menu-btn" class="lg:hidden text-gray-900 focus:outline-none p-2 bg-gray-50 rounded-md">
+                    <i class="fas fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="absolute top-20 right-6 w-48 bg-white border border-gray-100 rounded-xl shadow-2xl p-2 z-[60]">
+                <div class="flex flex-col text-[11px] font-bold uppercase tracking-widest text-gray-600">
+                    <a href="index.html" class="p-3 rounded-lg flex items-center gap-3"><i class="fas fa-home w-4 text-[#00C8D7]"></i> Home</a>
+                    <a href="about.html" class="p-3 rounded-lg flex items-center gap-3"><i class="fas fa-user-md w-4 text-[#00C8D7]"></i> About</a>
+                    <a href="treatments.html" class="p-3 rounded-lg flex items-center gap-3"><i class="fas fa-notes-medical w-4 text-[#00C8D7]"></i> Treatments</a>
+                    <a href="results.html" class="p-3 rounded-lg flex items-center gap-3"><i class="fas fa-star w-4 text-[#00C8D7]"></i> Results</a>
+                    <div class="h-[1px] bg-gray-100 my-1"></div>
+                    <a href="#booking" class="text-[#00C8D7] p-3 flex items-center gap-3 font-bold">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-pattern"></div>
+        <div class="max-w-6xl mx-auto px-6 relative flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-5/12">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-cyan-400 rounded-[3rem] blur-3xl opacity-10 group-hover:opacity-20 transition-opacity duration-500"></div>
+                    <img src="https://raw.githubusercontent.com/AnujAhinave/Medical-Clinic-/main/1.png" 
+                         class="rounded-[3rem] shadow-2xl border-8 border-white relative z-10 w-full object-cover transition-transform duration-500 group-hover:scale-[1.01]" 
+                         alt="Dr. Priyanka Jain Bavad">
+                    
+                    <div class="absolute -bottom-6 -right-6 bg-slate-900 text-white p-6 rounded-[2rem] shadow-2xl z-20 border border-slate-800">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-2xl font-black text-electric">5.0</span>
+                            <div class="flex text-[10px] text-yellow-400">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-[9px] uppercase font-bold tracking-[0.2em] text-slate-400">19+ Verified Reviews</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:w-7/12 text-center md:text-left">
+                <span class="text-electric font-black uppercase tracking-widest text-xs">Powering Bright Smiles</span>
+                <h1 class="text-5xl md:text-7xl font-black text-slate-900 mt-4 leading-tight tracking-tighter">Meet <br><span class="gradient-text uppercase">Dr. Priyanka Jain</span></h1>
+                <p class="text-slate-400 font-black mt-3 uppercase tracking-widest text-[11px]">RCT Specialist • Cosmetic Dentist • B.D.S</p>
+                <p class="text-xl text-slate-600 mt-8 leading-relaxed italic font-medium border-l-4 border-electric pl-6">
+                    "My goal is to offer specialized dental care that combines clinical precision with an aesthetic touch, ensuring every patient feels comfortable and confident."
+                </p>
+                <div class="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="tel:9167453795" class="bg-electric text-white px-8 py-4 rounded-2xl font-black shadow-lg shadow-cyan-200 hover:brightness-110 transition-all uppercase text-xs tracking-widest">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="treatments" class="py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-slate-900 uppercase tracking-tighter">Premium <span class="text-electric">Treatments</span></h2>
+                <p class="text-slate-500 mt-2 uppercase tracking-widest text-[10px] font-bold">Advanced Dental Solutions in Ghatkopar East</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 border border-white hover-scale">
+                    <div class="w-14 h-14 bg-cyan-100 text-electric rounded-2xl flex items-center justify-center text-2xl mb-8 shadow-sm">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Painless RCT</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Specialized Root Canal Treatments using the latest rotary technology for a fast, pain-free experience.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 border border-white hover-scale">
+                    <div class="w-14 h-14 bg-slate-900 text-white rounded-2xl flex items-center justify-center text-2xl mb-8">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Cosmetic Care</h3>
+                    <ul class="text-slate-500 text-sm space-y-4 font-medium">
+                        <li><i class="fas fa-check-circle text-electric mr-2"></i> Natural-looking Veneers</li>
+                        <li><i class="fas fa-check-circle text-electric mr-2"></i> Professional Whitening</li>
+                        <li><i class="fas fa-check-circle text-electric mr-2"></i> Invisible Cementing</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 border border-white hover-scale">
+                    <div class="w-14 h-14 bg-slate-100 text-slate-600 rounded-2xl flex items-center justify-center text-2xl mb-8">
+                        <i class="fas fa-align-center"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Orthodontics</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Modern solutions for teeth alignment including traditional braces and premium clear aligners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="text-yellow-400 text-3xl mb-6">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="text-2xl md:text-3xl font-medium text-slate-800 italic leading-relaxed">
+                "Very nice work. Can't differentiate between real tooth and cement. Thank you Dr. Priyanka and team for such a great service at affordable prices."
+            </p>
+            <p class="mt-8 font-black uppercase tracking-widest text-electric text-xs">— Google Review Patient</p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-900 text-white text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="text-4xl md:text-5xl font-black mb-8 uppercase tracking-tighter leading-tight italic">Ready for a <br><span class="text-electric">Brighter Smile?</span></h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="tel:9167453795" class="bg-electric text-white px-12 py-5 rounded-2xl font-black shadow-xl shadow-cyan-900/20 hover:brightness-110 transition-all uppercase text-sm tracking-widest">
+                    Book My Appointment
+                </a>
+            </div>
+            <p class="mt-10 text-slate-500 font-bold uppercase tracking-widest text-[10px]">Opposite MICL Aaradhya One Earth, Pant Nagar, Ghatkopar East</p>
+        </div>
+    </section>
+
+    <footer class="bg-[#0a1128] text-white py-16 border-t border-white/5 text-center">
+        <span class="font-black text-lg tracking-tighter uppercase">32 Watts <span class="text-electric italic">Dental Clinic</span></span>
+        <p class="text-slate-500 text-[10px] uppercase tracking-[0.4em] mt-4">© 2026 32 Watts Clinic | Mumbai, MH 400075</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                menu.classList.remove('active');
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+    </script>
+
+</body>
+</html>
