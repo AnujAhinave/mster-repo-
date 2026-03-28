@@ -2,35 +2,38 @@
 <html lang="en">
 <head>
     <script src="agency-engine.js"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>32 Watts Dental Clinic | Dr. Priyanka Jain | Ghatkopar East</title>
     
-    <link rel="icon" type="image/png" href="images (1).png">
+    <title class="inject-brand"></title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
     <style>
         :root {
-  --primary: #2563eb;
-  --accent: #3b82f6;
-  --bg-app: #ffffff;
-  --text-main: #111827;
-}
+            --primary: #2563eb; 
+            --accent: #0a1128;
+            --bg-app: #f8fafc;
+            --text-main: #0f172a;
+        }
 
-/* Update your existing classes to use these variables */
-.slot-card.state-booked { background-color: var(--primary); }
-.nav-tab.active { color: var(--primary); border-bottom-color: var(--primary); }
-body { background-color: var(--bg-app); color: var(--text-main); }
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
         html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
         
-        /* 32 Watts Branding */
-        .text-electric { color: #00C8D7; }
-        .bg-electric { background-color: #00C8D7; }
-        .gradient-text { background: linear-gradient(90deg, #00C8D7, #2C3E50); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        /* DYNAMIC COLORS: Linked to the Agency Engine */
+        .text-electric { color: var(--primary); }
+        .bg-electric { background-color: var(--primary); }
+        .border-electric { border-color: var(--primary); }
+        .gradient-text { 
+            background: linear-gradient(90deg, var(--primary), var(--accent)); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
         
-        /* Unified Hero Background */
+        body { background-color: var(--bg-app); color: var(--text-main); }
+
         .unified-hero-bg { 
             background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), 
             url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=60&w=1200'); 
@@ -40,18 +43,14 @@ body { background-color: var(--bg-app); color: var(--text-main); }
         .hover-scale { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .hover-scale:hover { transform: translateY(-5px); }
         
-        /* Dark Mode Form Dropdown */
+        /* Form Styling */
         select {
             background-color: #1e293b !important;
             color: #ffffff !important;
             padding: 15px;
-            border-bottom: 2px solid #00C8D7 !important;
+            border-bottom: 2px solid var(--primary) !important;
         }
         select option { background-color: #ffffff !important; color: #1e293b !important; font-weight: bold; }
-        select option[disabled] { color: #94a3b8 !important; background-color: #f1f5f9 !important; }
-        select:focus { outline: none; }
-        
-        #thank-you-page { display: none; }
         
         #mobile-menu {
             display: none;
@@ -63,31 +62,29 @@ body { background-color: var(--bg-app); color: var(--text-main); }
         #mobile-menu.active { display: block !important; opacity: 1; transform: scale(1) translateY(0); }
     </style>
 </head>
-<body class="bg-slate-50 font-sans text-slate-900 antialiased">
+<body class="antialiased">
 
 <nav class="bg-white/95 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
         <a href="index.html" class="flex items-center gap-4">
             <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-white shadow-sm bg-white">
-                <img src="images (1).png" alt="32 Watts Logo" class="w-full h-full object-contain scale-125">
+                <img src="" class="inject-favicon w-full h-full object-contain scale-125">
             </div>
             <div class="flex flex-col">
-                <span class="font-extrabold text-xl tracking-tight uppercase text-gray-900 leading-none">
-                    32 Watts <span class="text-[#00C8D7]">Dental</span>
-                </span>
-                <span class="text-[8px] font-bold tracking-[0.3em] text-gray-400 uppercase mt-1">Ghatkopar East</span>
+                <span class="inject-brand font-extrabold text-xl tracking-tight uppercase text-gray-900 leading-none"></span>
+                <span class="text-[8px] font-bold tracking-[0.3em] text-gray-400 uppercase mt-1">Specialist Center</span>
             </div>
         </a>
 
         <div class="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest text-gray-500">
-            <a href="index.html" class="text-[#00C8D7] underline decoration-[#00C8D7] decoration-2 underline-offset-8">Home</a>
-            <a href="about.html" class="hover:text-[#00C8D7] transition-colors">About Doctor</a>
-            <a href="treatments.html" class="hover:text-[#00C8D7] transition-colors">Treatments</a>
-            <a href="results.html" class="hover:text-[#00C8D7] transition-colors">Results</a>
+            <a href="index.html" class="text-electric underline decoration-2 underline-offset-8">Home</a>
+            <a href="about.html" class="hover:text-electric transition-colors">About <span class="inject-user"></span></a>
+            <a href="treatments.html" class="hover:text-electric transition-colors"><span class="inject-service-label"></span>s</a>
+            <a href="results.html" class="hover:text-electric transition-colors">Results</a>
         </div>
 
         <div class="flex items-center gap-3">
-            <a href="#booking" class="bg-black text-white px-6 py-2.5 rounded-md font-bold hover:bg-[#00C8D7] transition-colors text-xs uppercase tracking-widest shadow-lg">Book Slot</a>
+            <a href="#booking" class="bg-black text-white px-6 py-2.5 rounded-md font-bold hover:bg-electric transition-colors text-xs uppercase tracking-widest shadow-lg">Book Now</a>
             <button id="menu-btn" class="lg:hidden text-gray-900 focus:outline-none p-2 bg-gray-50 rounded-md">
                 <i class="fas fa-bars text-xl" id="menu-icon"></i>
             </button>
@@ -95,12 +92,10 @@ body { background-color: var(--bg-app); color: var(--text-main); }
 
         <div id="mobile-menu" class="absolute top-20 right-6 w-48 bg-white border border-gray-100 rounded-xl shadow-2xl p-2 z-[60]">
             <div class="flex flex-col text-[11px] font-bold uppercase tracking-widest text-gray-600">
-                <a href="index.html" class="p-3 rounded-lg flex items-center gap-3 font-bold"><i class="fas fa-home w-4 text-[#00C8D7]"></i> Home</a>
-                <a href="about.html" class="p-3 rounded-lg flex items-center gap-3"><i class="fas fa-user-md w-4 text-[#00C8D7]"></i> About</a>
-                <a href="treatments.html" class="p-3 rounded-lg flex items-center gap-3"><i class="fas fa-notes-medical w-4 text-[#00C8D7]"></i> Treatments</a>
-                <a href="results.html" class="p-3 rounded-lg flex items-center gap-3"><i class="fas fa-star w-4 text-[#00C8D7]"></i> Results</a>
-                <div class="h-[1px] bg-gray-100 my-1"></div>
-                <a href="#booking" class="text-[#00C8D7] p-3 flex items-center gap-3 font-bold">Book Now</a>
+                <a href="index.html" class="p-3 rounded-lg flex items-center gap-3 font-bold"><i class="fas fa-home w-4 text-electric"></i> Home</a>
+                <a href="about.html" class="p-3 rounded-lg flex items-center gap-3"><i class="fas fa-user-md w-4 text-electric"></i> About</a>
+                <a href="treatments.html" class="p-3 rounded-lg flex items-center gap-3"><i class="fas fa-notes-medical w-4 text-electric"></i> Services</a>
+                <a href="results.html" class="p-3 rounded-lg flex items-center gap-3"><i class="fas fa-star w-4 text-electric"></i> Results</a>
             </div>
         </div>
     </div>
@@ -112,17 +107,17 @@ body { background-color: var(--bg-app); color: var(--text-main); }
             <div class="w-full lg:w-3/5 order-2 lg:order-1">
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-50 border border-cyan-100 mb-6">
                     <span class="w-2 h-2 rounded-full bg-electric animate-pulse"></span>
-                    <span class="text-electric font-black tracking-widest text-[10px] uppercase">RCT & Cosmetic Expert</span>
+                    <span class="text-electric font-black tracking-widest text-[10px] uppercase">Specialist Care</span>
                 </div>
                 <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-[1.05] tracking-tight mb-8">
-                    Powering Bright Smiles in <span class="gradient-text uppercase">Ghatkopar</span>
+                    Advanced Care at <br><span class="inject-brand gradient-text uppercase"></span>
                 </h1>
                 <p class="text-slate-600 text-lg md:text-xl font-medium italic mb-10 leading-relaxed max-w-2xl">
-                    "Specialized in Painless Root Canals and Cosmetic Smile Designs using world-class dental technology."
+                    "Providing world-class technology and painless procedures for a healthier, brighter future."
                 </p>
                 <div class="flex flex-col sm:flex-row items-center gap-6">
                     <a href="#booking" class="w-full sm:w-auto bg-electric text-white px-10 py-5 rounded-2xl font-black flex items-center justify-center gap-3 hover-scale shadow-xl shadow-cyan-100 transition uppercase tracking-widest text-xs">
-                        Book Appointment
+                        Book <span class="inject-action"></span>
                     </a>
                 </div>
             </div>
@@ -131,11 +126,7 @@ body { background-color: var(--bg-app); color: var(--text-main); }
                 <div class="relative w-56 h-56 md:w-72 md:h-72 mb-8 group">
                     <div class="absolute inset-0 bg-cyan-400 rounded-full blur-2xl opacity-10 group-hover:opacity-25 transition duration-500"></div>
                     <img src="https://raw.githubusercontent.com/AnujAhinave/Medical-Clinic-/main/1.png" 
-                         alt="Dr. Priyanka Jain" class="relative w-full h-full rounded-full border-8 border-white shadow-2xl object-cover transition-transform group-hover:scale-[1.03]">
-                </div>
-                <div class="text-center">
-                    <h2 class="text-3xl font-black text-slate-900">Dr. Priyanka Jain</h2>
-                    <p class="text-[10px] text-slate-400 uppercase font-black tracking-[0.3em] mt-3">RCT Specialist • Cosmetic Dentist • B.D.S</p>
+                         alt="Specialist" class="relative w-full h-full rounded-full border-8 border-white shadow-2xl object-cover transition-transform group-hover:scale-[1.03]">
                 </div>
             </div>
         </div>
@@ -147,25 +138,25 @@ body { background-color: var(--bg-app); color: var(--text-main); }
         <div id="booking-container" class="bg-[#1A1A1A] rounded-2xl border border-white/10 p-10 md:p-14 shadow-2xl">
             <div id="booking-form-wrapper">
                 <h3 class="text-3xl font-extrabold text-white text-center uppercase mb-10 tracking-tight">
-                    Book <span class="text-[#00C8D7]">Appointment</span>
+                    Book <span class="inject-user"></span> <span class="text-electric inject-action"></span>
                 </h3>
                 <form id="clinic-booking-form" class="grid grid-cols-1 gap-6">
                     <div class="relative group">
                         <i class="fas fa-user absolute left-5 top-1/2 -translate-y-1/2 text-gray-500"></i>
                         <input type="text" name="firstName" placeholder="FULL NAME" required 
-                               class="w-full bg-[#2A2A2A] border border-transparent rounded-lg pl-12 pr-6 py-4 text-white focus:border-[#00C8D7] outline-none transition uppercase text-[10px] font-bold tracking-widest">
+                               class="w-full bg-[#2A2A2A] border border-transparent rounded-lg pl-12 pr-6 py-4 text-white focus:border-electric outline-none transition uppercase text-[10px] font-bold tracking-widest">
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="relative">
                             <i class="fas fa-phone absolute left-5 top-1/2 -translate-y-1/2 text-gray-500"></i>
                             <input type="tel" name="phone" placeholder="MOBILE NUMBER" required 
-                                   class="w-full bg-[#2A2A2A] border border-transparent rounded-lg pl-12 pr-6 py-4 text-white focus:border-[#00C8D7] outline-none transition uppercase text-[10px] font-bold tracking-widest">
+                                   class="w-full bg-[#2A2A2A] border border-transparent rounded-lg pl-12 pr-6 py-4 text-white focus:border-electric outline-none transition uppercase text-[10px] font-bold tracking-widest">
                         </div>
                         <div class="relative">
                             <i class="fas fa-envelope absolute left-5 top-1/2 -translate-y-1/2 text-gray-500"></i>
                             <input type="email" name="email" placeholder="EMAIL ADDRESS" required 
-                                   class="w-full bg-[#2A2A2A] border border-transparent rounded-lg pl-12 pr-6 py-4 text-white focus:border-[#00C8D7] outline-none transition uppercase text-[10px] font-bold tracking-widest">
+                                   class="w-full bg-[#2A2A2A] border border-transparent rounded-lg pl-12 pr-6 py-4 text-white focus:border-electric outline-none transition uppercase text-[10px] font-bold tracking-widest">
                         </div>
                     </div>
 
@@ -173,7 +164,7 @@ body { background-color: var(--bg-app); color: var(--text-main); }
                         <i class="fas fa-notes-medical absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 z-10"></i>
                         <select id="service-select" name="service" required 
                                 class="w-full border border-transparent rounded-lg pl-12 pr-6 py-4 outline-none appearance-none uppercase text-[10px] font-bold tracking-widest">
-                            <option value="">SELECT TREATMENT</option>
+                            <option value="">SELECT SERVICE</option>
                         </select>
                     </div>
 
@@ -182,7 +173,7 @@ body { background-color: var(--bg-app); color: var(--text-main); }
                             <i class="fas fa-calendar absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 z-10"></i>
                             <select id="doctor-date" name="selected_date" disabled required 
                                     class="w-full border border-transparent rounded-lg pl-12 pr-6 py-4 outline-none appearance-none disabled:opacity-30 uppercase text-[10px] font-bold tracking-widest">
-                                <option value="">CHOOSE TREATMENT FIRST</option>
+                                <option value="">CHOOSE SERVICE FIRST</option>
                             </select>
                         </div>
                         <div class="relative">
@@ -195,20 +186,20 @@ body { background-color: var(--bg-app); color: var(--text-main); }
                     </div>
                     
                     <textarea name="description" placeholder="DESCRIBE YOUR CONCERN..." required rows="3"
-                              class="w-full bg-[#2A2A2A] border border-transparent rounded-lg px-6 py-4 text-white focus:border-[#00C8D7] outline-none transition uppercase text-[10px] font-bold tracking-widest"></textarea>
+                              class="w-full bg-[#2A2A2A] border border-transparent rounded-lg px-6 py-4 text-white focus:border-electric outline-none transition uppercase text-[10px] font-bold tracking-widest"></textarea>
                     
                     <button type="submit" id="submit-btn" 
-                            class="w-full bg-[#00C8D7] text-white font-bold py-5 rounded-lg hover:bg-white hover:text-black transition-colors duration-300 uppercase mt-4 tracking-widest text-xs">
-                        Confirm Appointment
+                            class="w-full bg-electric text-white font-bold py-5 rounded-lg hover:bg-white hover:text-black transition-colors duration-300 uppercase mt-4 tracking-widest text-xs">
+                        Confirm <span class="inject-action"></span>
                     </button>
                 </form>
             </div>
             <div id="thank-you-page" class="hidden text-center py-10">
-                <div class="w-20 h-20 bg-[#00C8D7] rounded-full flex items-center justify-center text-white text-4xl mx-auto mb-6">
+                <div class="w-20 h-20 bg-electric rounded-full flex items-center justify-center text-white text-4xl mx-auto mb-6">
                     <i class="fas fa-check"></i>
                 </div>
                 <h3 class="text-3xl font-extrabold text-white uppercase tracking-tight">Slot Locked</h3>
-                <p class="text-[#00C8D7] mt-4 text-sm tracking-widest font-bold uppercase">We will WhatsApp you shortly.</p>
+                <p class="text-electric mt-4 text-sm tracking-widest font-bold uppercase">We will WhatsApp you shortly.</p>
             </div>
         </div>
     </div>
@@ -218,10 +209,8 @@ body { background-color: var(--bg-app); color: var(--text-main); }
     <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 text-center md:text-left">
         <div>
             <h3 class="font-bold text-xl mb-8 uppercase text-electric">Location</h3>
-            <p class="font-bold text-sm mb-4 leading-relaxed">
-                1st Floor, JMB House, Opp. MICL Aaradhya One Earth, Naidu Colony, Pant Nagar, Ghatkopar (E) - 400075
-            </p>
-            <a href="tel:9167453795" class="text-2xl font-black text-white">+91 91674 53795</a>
+            <p class="inject-address font-bold text-sm mb-4 leading-relaxed"></p>
+            <a href="tel:08591929448" class="text-2xl font-black text-white">085919 29448</a>
         </div>
         <div>
             <h3 class="font-bold text-xl mb-8 uppercase text-electric">Clinic Timing</h3>
@@ -232,41 +221,7 @@ body { background-color: var(--bg-app); color: var(--text-main); }
 </footer>
 
 <script>
-    const MASTER_CONFIG = {
-  brandName: "Sufiyan Hair Studio", // Change this for the next client
-  type: "SALON",                   // Options: SALON, CLINIC
-  theme: {
-    primary: "#000000",            // Salon Black
-    accent: "#f59e0b",             // Salon Gold
-    bg: "#ffffff",                 // Page Background
-    text: "#111827"                // Main Text
-  },
-  labels: {
-    user: "Client",                // Change to "Patient" for doctors
-    action: "Booking"              // Change to "Appointment" for doctors
-  }
-};
-    // NAVIGATION LOGIC
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    const icon = document.getElementById('menu-icon');
-
-    btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        menu.classList.toggle('active');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!menu.contains(e.target) && !btn.contains(e.target)) {
-            menu.classList.remove('active');
-            icon.classList.add('fa-bars');
-            icon.classList.remove('fa-times');
-        }
-    });
-
-    // API & BOOKING LOGIC
+    // 3. THE LINK: Using the Global Engine API URL
     const API_URL = getGasUrl();
     const serviceSelect = document.getElementById('service-select');
     const dateSelect = document.getElementById('doctor-date');
@@ -276,14 +231,6 @@ body { background-color: var(--bg-app); color: var(--text-main); }
 
     let allAvailableSlots = []; 
     const months = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
-
-    function parseDateFlexible(dateStr) {
-        if (!dateStr) return null;
-        const d = new Date(dateStr);
-        if (isNaN(d.getTime())) return null;
-        d.setHours(0,0,0,0);
-        return d;
-    }
 
     async function loadClinicSchedule() {
         try {
@@ -300,10 +247,10 @@ body { background-color: var(--bg-app); color: var(--text-main); }
 
             allAvailableSlots = []; 
             data.forEach(item => {
-                const sDate = parseDateFlexible(item.date);
+                const sDate = parseDateSafe(item.date);
                 if (sDate && sDate >= startDate && sDate <= endDate) {
                     allAvailableSlots.push({
-                        dateKey: `${String(sDate.getDate()).padStart(2, '0')} ${months[sDate.getMonth()]} ${sDate.getFullYear()}`,
+                        dateKey: formatDateDisplay(sDate),
                         time: item.time,
                         status: String(item.status || "available").toLowerCase(),
                         service: item.service ? String(item.service).toUpperCase().trim() : "ALL"
@@ -311,19 +258,15 @@ body { background-color: var(--bg-app); color: var(--text-main); }
                 }
             });
 
-            serviceSelect.innerHTML = '<option value="">SELECT TREATMENT</option>';
-            if (settings.services) {
-                settings.services.forEach(s => {
-                    const opt = document.createElement('option');
-                    opt.value = s.toUpperCase(); opt.textContent = s.toUpperCase(); serviceSelect.appendChild(opt);
-                });
+            // Populate services from Engine if API is empty
+            if (serviceSelect.innerHTML.includes('SYNCING')) {
+                // Fallback handled by applyGlobalBranding in engine.js
             }
-            const optGen = document.createElement('option');
-            optGen.value = "ALL"; optGen.textContent = "GENERAL CONSULTATION"; serviceSelect.appendChild(optGen);
 
-        } catch (e) { console.error(e); }
+        } catch (e) { console.error("Sync Error:", e); }
     }
 
+    // Dropdown Handlers
     serviceSelect.addEventListener('change', (e) => {
         const chosen = e.target.value.toUpperCase();
         dateSelect.innerHTML = '<option value="">CHOOSE DATE</option>';
@@ -350,7 +293,7 @@ body { background-color: var(--bg-app); color: var(--text-main); }
                 .forEach(slot => {
                     const opt = document.createElement('option');
                     opt.value = slot.time;
-                    opt.textContent = slot.status === 'booked' ? `${slot.time} (BOOKED)` : slot.time;
+                    opt.textContent = slot.status === 'booked' ? `${formatTime12(slot.time)} (BOOKED)` : formatTime12(slot.time);
                     opt.disabled = slot.status === 'booked';
                     timeSelect.appendChild(opt);
                 });
@@ -380,6 +323,17 @@ body { background-color: var(--bg-app); color: var(--text-main); }
     });
 
     loadClinicSchedule();
+
+    // Mobile Menu Toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('menu-icon');
+    btn.onclick = (e) => {
+        e.stopPropagation();
+        menu.classList.toggle('active');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    };
 </script>
 </body>
 </html>
