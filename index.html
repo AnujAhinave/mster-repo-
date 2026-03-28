@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="agency-engine.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>32 Watts Dental Clinic | Dr. Priyanka Jain | Ghatkopar East</title>
@@ -266,7 +267,7 @@ body { background-color: var(--bg-app); color: var(--text-main); }
     });
 
     // API & BOOKING LOGIC
-    const API_URL = "https://script.google.com/macros/s/AKfycby87Kh9jGLi3-2kctMIWhF1eGxLZHQAN0jIftq9SzrCysU5KuwKbMISs7VuWjvIvH9BTA/exec";
+    const API_URL = getGasUrl();
     const serviceSelect = document.getElementById('service-select');
     const dateSelect = document.getElementById('doctor-date');
     const timeSelect = document.getElementById('doctor-time');
